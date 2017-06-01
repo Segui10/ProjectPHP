@@ -52,16 +52,22 @@
                 <td>Marca: </td>
                 <td><input type="text" id="marca" name="marca" placeholder="marca" value="<?php echo $user['marca'];?>" /></td>
                 <td><font color="red">
-                    <span id="error_marca" class="error"/>
-                        
-                
+                    <span id="error_marca" class="error">
+                        <?php
+                           echo $error['marca']
+                        ?>
+                </span>
                 </font></td>
             </tr>
             <tr>
                 <td>Modelo: </td>
                 <td><input type="text" id="model" name="model" placeholder="model" value="<?php echo $user['model'];?>" /></td>
                 <td><font color="red">
-                    <span id="error_model" class="error"/>
+                    <span id="error_model" class="error">
+                    <?php
+                           echo $error['model']
+                        ?>
+                    </span>
                         
                 
                 </font></td>
@@ -153,32 +159,61 @@
                 <td>Tipo de pantalla: </td>
                 <td><input type="text" id="sty" name="sty" placeholder="sty" value="<?php echo $user['sty'];?>"/></td>
                 <td><font color="red">
-                    <span id="error_sty" class="error"/>
+                    <span id="error_sty" class="error">
+                    <?php
+                           echo $error['sty']
+                        ?>
+                    </span>
                       
                 </font></td>
             </tr>
+            <p>
+               <label for="so"> Resolucion de la pantalla:</label>
+           
+                <select id="repan" name="repan" placeholder="repan">
+                    <option value="320 x 480">320 x 480</option>
+                    <option value="480 x 800">480 x 800</option>
+                    <option value="720 x 1280">720 x 1280</option>
+                    <option value="1080 x 1920">1080 x 1920</option>
+                    <option value="1440 x 2560">1440 x 2560</option>
+                </select>
+               
+                    <span id="error_repan" class="error">
+                       
+                    </span>
+                
+            </p>
             <tr>
-                <td>Procesador: </td>
+                <td>Tipo de Procesador: </td>
                 <td><input type="text" id="pro" name="pro" placeholder="pro" value="<?php echo $user['pro'];?>"/></td>
                 <td><font color="red">
-                    <span id="error_pro" class="error"/>
-                      
+                    <span id="error_pro" class="error">
+                    <?php
+                           echo $error['pro']
+                        ?>
+                      </span>
                 </font></td>
             </tr>
              <tr>
-                <td>Cores: </td>
+                <td>Numero de Cores: </td>
                 <td><input type="text" id="core" name="core" placeholder="core" value="<?php echo $user['core'];?>"/></td>
                 <td><font color="red">
-                    <span id="error_core" class="error"/>
-                      
+                    <span id="error_core" class="error">
+                    <?php
+                           echo $error['core']
+                        ?>
+                      </span>
                 </font></td>
             </tr>
             <tr>
                 <td>Core Speed: </td>
                 <td><input type="text" id="speed_c" name="speed_c" placeholder="speed_c" value="<?php echo $user['speed'];?>"/></td>
                 <td><font color="red">
-                    <span id="error_speed" class="error"/>
-                      
+                    <span id="error_speed" class="error">
+                     <?php
+                           echo $error['speed']
+                        ?>
+                    </span>
                 </font></td>
             </tr>
             
@@ -252,8 +287,11 @@
                 <td>Antutu: </td>
                 <td><input type="text" id="antutu" name="antutu" placeholder="antutu" value="<?php echo $user['antutu'];?>"/></td>
                 <td><font color="red">
-                    <span id="error_urlimg" class="error"/>
-                      
+                    <span id="error_urlimg" class="error">
+                      <?php
+                         echo $error['antutu']
+                        ?> 
+                        </span>
                 </font></font></td>
             </tr>
             <tr>

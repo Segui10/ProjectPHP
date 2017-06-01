@@ -168,6 +168,7 @@ function validate(){
     var v_pro=document.getElementById('pro').value;
     var v_core=document.getElementById('core').value;
     var v_speed=document.getElementById('speed_c').value;
+    
     var v_fecha_nacimiento=document.getElementById('fecha').value;
     var v_observaciones=document.getElementById('observaciones').value;
     var v_antutu=document.getElementById('antutu').value;

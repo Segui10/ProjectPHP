@@ -26,15 +26,23 @@
                 $check=true;
                 $error=array(
                     'usuario' => '',
+                    'marca' => '',
+                    'model' => '',
+                    'sty' => '',
+                    'pro' => '',
+                    'core' => '',
+                    'speed' => '',
+                    'antutu' => '',
                     'fecha_nacimiento' => '',
                     'observaciones' => ''
                     );
             //$check = true;
             
             if (isset($_POST['create'])){
-                $check=validate();
-                
-                if ($check){
+                $result=validate();
+                print_r($result);
+                die();
+                if ($result['resultado']){
                     $_SESSION['user']=$_POST;
                     try{
                         $daouser = new DAOUser();
@@ -52,6 +60,8 @@
             			$callback = 'index.php?page=503';
     			        die('<script>window.location.href="'.$callback .'";</script>');
             		}
+                }else {
+                    $error = $result['error'];
                 }
             }
             include("module/user/view/create_user.php");
@@ -59,18 +69,25 @@
             
         case 'update';
             include("module/user/model/validate.php");
-            $check=true;
-                $error=array(
+                $check = true;
+                $error = array(
                     'usuario' => '',
+                    'marca' => '',
+                    'model' => '',
+                    'sty' => '',
+                    'pro' => '',
+                    'core' => '',
+                    'speed' => '',
+                    'antutu' => '',
                     'fecha_nacimiento' => '',
                     'observaciones' => ''
                     );
             //$check = true;
             
             if (isset($_POST['update'])){
-                $check=validate();
-                
-                if ($check){
+                $result=validate();
+                 
+                if ($result['resultado']){
                     $_SESSION['user']=$_POST;
                     try{
                         $daouser = new DAOUser();
@@ -88,6 +105,10 @@
             			$callback = 'index.php?page=503';
     			        die('<script>window.location.href="'.$callback .'";</script>');
             		}
+                }  else {
+                    $error = $result['error'];
+                    $_SESSION['user']=$_POST;
+                    $_GET['id']=$_POST['usuario'];
                 }
             }
             

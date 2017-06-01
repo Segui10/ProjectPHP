@@ -32,7 +32,9 @@
                 <td><input type="text" id="marca" name="marca" placeholder="marca" value=""/></td>
                 <td><font color="red">
                     <span id="error_marca" class="error">
-                       
+                       <?php
+                           echo $error['marca']
+                        ?>
                     </span>
                 </font></td>
             </tr>
@@ -41,7 +43,9 @@
                 <td><input type="text" id="model" name="model" placeholder="model" value=""/></td>
                 <td><font color="red">
                     <span id="error_model" class="error">
-                       
+                       <?php
+                           echo $error['model']
+                        ?>
                     </span>
                 </font></td>
             </tr>
@@ -65,7 +69,9 @@
                 <td><input type="text" id="sty" name="sty" placeholder="sty" value=""/></td>
                 <td><font color="red">
                     <span id="error_sty" class="error">
-                        
+                        <?php
+                           echo $error['sty']
+                        ?>
                     </span>
                 </font></td>
             </tr>
@@ -90,7 +96,9 @@
                 <td><input type="text" id="pro" name="pro" placeholder="pro" value=""/></td>
                 <td><font color="red">
                     <span id="error_pro" class="error">
-                        
+                        <?php
+                           echo $error['pro']
+                        ?>
                     </span>
                 </font></td>
             </tr>
@@ -100,7 +108,9 @@
                 <td><input type="text" id="core" name="core" placeholder="core" value=""/></td>
                 <td><font color="red">
                     <span id="error_core" class="error">
-                        
+                        <?php
+                           echo $error['core']
+                        ?>
                     </span>
                 </font></td>
             </tr>
@@ -108,14 +118,16 @@
                 <td><input type="text" id="speed_c" name="speed_c" placeholder="speed_c" value=""/></td>
                 <td><font color="red">
                     <span id="error_speed" class="error">
-                        
+                        <?php
+                           echo $error['speed']
+                        ?>
                     </span>
                 </font></td>
             </tr>
             
             
             <tr>
-                <td>Fecha de nacimiento: </td>
+                <td>Fecha de presentacion: </td>
                 <td><input id="fecha" type="text" name="fecha_nacimiento" placeholder="fecha de nacimiento" value=""/></td>
                 <td><font color="red">
                     <span id="error_fecha_nacimiento" class="error">
@@ -167,7 +179,9 @@
                 <td><input type="text" id="antutu" name="antutu" placeholder="antutu" value=""/></td>
                 <td><font color="red">
                     <span id="error_antutu" class="error">
-                        
+                       <?php
+                         echo $error['antutu']
+                        ?> 
                     </span>
                 </font></td>
             </tr>
