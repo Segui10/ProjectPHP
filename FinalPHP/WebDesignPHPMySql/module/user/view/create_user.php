@@ -185,7 +185,25 @@
                     </span>
                 </font></td>
             </tr>
+              <tr>
+                <td>Cobertura: </td>
+                <td><input type="checkbox" id="aficion[]" name="aficion[]" placeholder= "aficion" value="2G"/>2G
+                    <input type="checkbox" id="aficion[]" name="aficion[]" placeholder= "aficion" value="3G"/>3G
+                    <input type="checkbox" id="aficion[]" name="aficion[]" placeholder= "aficion" value="4G"/>4G</td>
+                <td><font color="red">
+                    <span id="error_aficion" class="error">
+                        <?php
+                             echo $error['aficion']
+                        ?>
+                    </span>
+                </font></font></td>
+            </tr>
             
+                <td><font color="red">
+                    <span id="error_aficion" class="error">
+                        
+                </font></font></td>
+            </tr>
             <tr>
                 <td><input type="submit" name="create" id="create"/></td>
                 <td align="right"><a href="index.php?page=controller_user&op=list">Volver</a></td>

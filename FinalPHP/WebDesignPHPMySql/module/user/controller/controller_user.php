@@ -35,13 +35,13 @@
                     'antutu' => '',
                     'fecha_nacimiento' => '',
                     'observaciones' => ''
+                    
                     );
             //$check = true;
             
             if (isset($_POST['create'])){
                 $result=validate();
-                print_r($result);
-                die();
+                
                 if ($result['resultado']){
                     $_SESSION['user']=$_POST;
                     try{

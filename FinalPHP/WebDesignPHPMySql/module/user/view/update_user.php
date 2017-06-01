@@ -295,6 +295,49 @@
                 </font></font></td>
             </tr>
             <tr>
+                <td>Aficiones: </td>
+                <?php
+                    $afi=explode(":", $user['cober']);
+                ?>
+                <td>
+                    <?php
+                        $busca_array=in_array("2G", $afi);
+                        if($busca_array){
+                    ?>
+                        <input type="checkbox" id= "aficion[]" name="aficion[]" value="2G" checked/>2G
+                    <?php
+                        }else{
+                    ?>
+                        <input type="checkbox" id= "aficion[]" name="aficion[]" value="2G"/>2G
+                    <?php
+                        }
+                    ?>
+                    <?php
+                        $busca_array=in_array("3G", $afi);
+                        if($busca_array){
+                    ?>
+                        <input type="checkbox" id= "aficion[]" name="aficion[]" value="3G" checked/>3G
+                    <?php
+                        }else{
+                    ?>
+                        <input type="checkbox" id= "aficion[]" name="aficion[]" value="3G"/>3G
+                    <?php
+                        }
+                    ?>
+                    <?php
+                        $busca_array=in_array("4G", $afi);
+                        if($busca_array){
+                    ?>
+                        <input type="checkbox" id= "aficion[]" name="aficion[]" value="4G" checked/>4G</td>
+                    <?php
+                        }else{
+                    ?>
+                    <input type="checkbox" id= "aficion[]" name="aficion[]" value="4G"/>4G</td>
+                    <?php
+                        }
+                    ?>
+                </td>
+            <tr>
                 <td><input type="submit" name="update" id="update"/></td>
                 <td align="right"><a href="index.php?page=controller_user&op=list">Volver</a></td>
             </tr>

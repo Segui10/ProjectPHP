@@ -19,8 +19,12 @@
         	$comment=$datos['observaciones'];
         	$url=$datos['urlimg'];
             $antutu=$datos['antutu'];
-        	$sql = " INSERT INTO usuario (user,sisop, marca,model,screen,sty,repan,pro,core,speed, birthdate, country, comment, urlimg, antutu)"
-        		. " VALUES ('$user','$sisop','$marca','$model','$screty','$sty','$repan','$pro','$core','$speed', '$birthdate', '$country', '$comment','$url','$antutu')";
+            $cober='';
+            foreach ($datos['aficion'] as $indice) {
+                $cober=$cober."$indice:";
+            }
+        	$sql = " INSERT INTO usuario (user,sisop, marca,model,screen,sty,repan,pro,core,speed, birthdate, country, comment, urlimg, antutu,cober)"
+        		. " VALUES ('$user','$sisop','$marca','$model','$screty','$sty','$repan','$pro','$core','$speed', '$birthdate', '$country', '$comment','$url','$antutu','$cober')";
             
             $conexion = connect::con();
             $res = mysqli_query($conexion, $sql);
@@ -62,8 +66,13 @@
         	$comment=$datos['observaciones'];
         	$urlimg=$datos['urlimg'];
             $antutu=$datos['antutu'];
+            $cober='';
+            foreach ($datos['aficion'] as $indice) {
+
+                $cober=$cober."$indice:";
+            }
         	$sql = " UPDATE usuario SET sisop='$sisop',marca='$marca',model='$model',screen='$screty',sty='$sty',repan='$repan',pro='$pro',core='$core',speed='$speed',birthdate='$birthdate',country='$country', "
-                . " comment='$comment',urlimg='$urlimg',antutu='$antutu' WHERE user='$user'";
+                . " comment='$comment',urlimg='$urlimg',antutu='$antutu',cober='$cober' WHERE user='$user'";
             
             $conexion = connect::con();
             $res = mysqli_query($conexion, $sql);

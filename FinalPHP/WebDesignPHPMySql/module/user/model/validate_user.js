@@ -168,7 +168,7 @@ function validate(){
     var v_pro=document.getElementById('pro').value;
     var v_core=document.getElementById('core').value;
     var v_speed=document.getElementById('speed_c').value;
-    
+    var v_aficion=document.getElementsByName('aficion[]').value;
     var v_fecha_nacimiento=document.getElementById('fecha').value;
     var v_observaciones=document.getElementById('observaciones').value;
     var v_antutu=document.getElementById('antutu').value;
@@ -184,7 +184,8 @@ function validate(){
     var r_fecha_nacimiento=validate_fecha(v_fecha_nacimiento);
     var r_observaciones=validate_observaciones(v_observaciones);
     var r_antutu=validate_antutu(v_antutu);
-    
+    var r_aficion=validate_aficion(v_aficion);
+
     if(!r_usuario){
         document.getElementById('error_usuario').innerHTML = " * El usuario introducido no es valido";
         check=false;
@@ -252,6 +253,12 @@ function validate(){
         check=false;
     }else{
         document.getElementById('error_antutu').innerHTML = "";
+    }
+      if(!r_aficion){
+        document.getElementById('error_aficion').innerHTML = " * No has seleccionado ninguna aficionjs";
+        check=false;
+    }else{
+        document.getElementById('error_aficion').innerHTML = "";
     }
     
     return check;

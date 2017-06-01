@@ -78,6 +78,7 @@
                 <p class="borom">Pais de Fabricacion: <?php echo $user['country']; ?></p>
                 <p class="borom">Fecha de lanzamiento: <?php echo $user['birthdate']; ?></p>
                 <p class="borom">Puntuacion Antutu: <?php echo $user['antutu']; ?></p>
+                <p class="borom">Cobertura: <?php echo $user['cober']; ?></p>
                 <br>
                 </div>
            
