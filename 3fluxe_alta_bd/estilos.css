@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+body{
+    width: 100%;
+    margin: auto;
+    background-color: #4CAF50;
+      font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+}
+label{
+    display: block;/*con esto colocamos las etiquetas label encima de los campos*/
+    font-weight: bold;
+}
+.contacto{
+    padding-top: 45px ;
+    padding-bottom: 45px ;
+    padding-left : 45px ;
+    padding-right: 40px;
+    margin-top: 50px;
+    background-color: #F9F9F9;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    /*box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #999;con esto le colocamos un borde al formulario*/
+}
+.contacto input[type='text'], .contacto textarea{
+       width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 0px;
+    padding: 10px;
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+    margin-top: 10px;
+}
+
+.contacto input[type='text']:hover, .contacto textarea:focus{
+    -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+*{
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #798e94;
+}
+.formulario{
+	margin-top: 100px;
+}
+.error{
+    background-color: #FE2E2E;
+    padding: 8px 10px;
+    border-radius: 4px;
+    color: white;
+	font-size: 12px;
+    margin-left: 267px;
+    margin-top: -40px;
+    position: absolute;
+}
+.error:before{ /* Este es un truco para crear una flechita */
+    content: '';
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #FE2E2E;
+    border-left: 10px solid transparent;
+    left: -16px;
+    position: absolute;
+    top: 5px;
+}
+
+.contacto input[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.contacto input[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contacto input[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+ .contacto h3 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.contacto h2 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+}
+#years {
+ width: 17%;
+ margin: 0 auto;
+}
+
+.contacto hr {
+  background-color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 2px dashed #8c8b8b;
+  width: 105%;
+}
+.styled-select {
+  display: flex;
+  justify-content: center;
+}
+.styled-select select {
+   width: 240px;
+   height: 34px;
+   overflow: hidden;
+   background: url(new_arrow.png) no-repeat right #ddd;
+   border: 1px solid #ccc;}
