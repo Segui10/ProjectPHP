@@ -1,0 +1,288 @@
+body {
+	font-family: 'Nunito', sans-serif;
+    font-size:11px;
+	color:#333333;
+	background-color:#f9f7ed;
+	margin:0px;
+}
+#wrapper {
+	width:100%;
+	margin:auto;
+	background-color:#FFFFFF;	
+}
+#header {
+	padding-top: 1px;
+	background-color:#5fcf80;
+	background-repeat:no-repeat;
+	height:120px;
+}
+#header h1{
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 5px;
+   float: left;
+      position: relative;
+      left: 40%;
+}
+#header img{
+    float: left;
+      position: relative;
+      left: 40%;
+    text-align: center;
+    padding-top: 15px;
+}
+#menu {
+overflow: hidden;
+background-color: #333;
+    
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+.topnav a:hover {
+  background-color: #5fcf80;
+  color: #fff;
+}
+.topnav .icon {
+  display: none;
+}
+    form {
+  max-width: 50%;
+  margin: 10px auto;
+  padding: 10px 20px;
+  padding-right: 3.5%;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+ 
+  .topnav a {
+    float: inherit;
+    display: block;
+    text-align: left;
+    padding: 14px 0px;
+        text-align: center;
+
+  }
+    #header h1{
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 5px;
+   float: left;
+      position: relative;
+      left: 20%;
+}
+#header img{
+    float: left;
+      position: relative;
+      left: 20%;
+    text-align: center;
+    padding-top: 15px;
+}
+    form {
+  margin: 10px auto;
+  padding: 10px 20px;
+  padding-right: 3.5%;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+}
+
+#contenido {
+   
+    padding-left: 5%;
+    padding-right: 5%;
+	padding-top:2.5%;
+    padding-bottom: 2.5%;
+    min-height: 422px;
+    height: auto;
+    
+}
+#footer {
+	height:130px;
+	color:#FFFFFF;
+	text-align:center;
+	background-color: #333;
+    position:inherit;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    
+}
+#contenido h1 {
+
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+}
+.styerror {
+    color: #ff0000;
+	font-family: 'Nunito', sans-serif;
+    font-size: 10pt;
+    font-style:italic;
+}
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+input[type="submit"] {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+.styerror { 
+  color: #FE2E64; 
+  font-family: 'Nunito', sans-serif;
+  font-size: 10pt;}
+		label {
+			width:120px;
+			float:left;
+		}
+		#result {
+			font-weight:bold;
+			color:#FE2E64;
+		}
+@media screen and (min-width: 480px) {
+
+  form {
+    max-width: 480px;
+  }
+
+::-webkit-input-placeholder {
+  color: #000;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:-moz-placeholder {
+  color: #000;
+  opacity: 0.5;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+::-moz-placeholder {
+  color: #000;
+  opacity: 0.5;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:-ms-input-placeholder {  
+  color: #000;
+  opacity: 0.5;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+/* Place Holder CSS for Focus */
+:hover::-webkit-input-placeholder {
+  opacity: 0.75;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:hover:-moz-placeholder {
+  opacity: 0.75;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:hover::-moz-placeholder {
+  opacity: 0.75;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:hover:-ms-input-placeholder {  
+  opacity: 0.75;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+
+/* Place Holder CSS for Focus */
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:focus:-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:focus:-ms-input-placeholder {  
+  opacity: 0;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+    
