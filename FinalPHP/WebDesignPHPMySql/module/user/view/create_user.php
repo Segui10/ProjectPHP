@@ -2,18 +2,18 @@
     <form autocomplete="on" method="post" name="alta_user" id="alta_user" onsubmit="return validate();" 
           action="index.php?page=controller_user&op=create">
         <h1>Usuario nuevo</h1>
-        <table border='0'>
-            <tr>
-                <td>Id: </td>
-                <td><input type="text" id="usuario" name="usuario" placeholder="id" value=""/></td>
-                <td><font color="red">
+        <fieldset>
+                <p>
+                Id: 
+                <input type="text" id="usuario" name="usuario" placeholder="id" value=""/>
+                <font color="red">
                     <span id="error_usuario" class="error">
                        <?php
                            echo $error['usuario']
                         ?>
                     </span>
-                </font></td>
-            </tr>
+                </font>
+            </p>
             <tr>
                 <td>Sistema Operativo: </td>
                 <td><select id="sisop" name="sisop" placeholder="sisop">

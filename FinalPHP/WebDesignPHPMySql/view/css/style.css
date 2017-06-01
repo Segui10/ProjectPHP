@@ -823,3 +823,8 @@ height: 23px;
   background-image: linear-gradient(bottom, rgb(62,51,46) 100%, rgb(101,86,78) 0%);
   box-shadow: inset 0px 1px 0px #238139, 0px 2px 0px 0px #238139;
 }
+.cnt {
+width: 100%;
+min-height: 350px;
+border: 1px solid #e1e1e1;
+}
