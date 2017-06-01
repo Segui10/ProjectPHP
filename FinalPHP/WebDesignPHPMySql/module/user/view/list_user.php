@@ -7,6 +7,29 @@
     	    <div class="create">
     		<p><a href="index.php?page=controller_user&op=create">Create</a></p>
             </div>
+            </div>
+            <div class="search">
+            <h1>Filtros:</h1>
+            <p>Dispositivos: </p>
+            <div class="and">
+            <p><a href="index.php?page=controller_user&op=list&so=Android">Dispositivos Android</a></p>
+            </div>
+            <div class="win">
+            <p><a href="index.php?page=controller_user&op=list&so=Windows Phone">Dispositivos Windows Phone</a></p>
+            </div>
+            <div class="ios">
+            <p><a href="index.php?page=controller_user&op=list&so=IOS">Dispositivos IOs</a></p>
+            </div>
+            <div class="all">
+            <p><a href="index.php?page=controller_user&op=list">Todos los dispositivos</a></p>
+            </div>
+            <p>Ordenar</p>
+            <div class="and">
+            <p><a href="index.php?page=controller_user&op=list&or=antutu">Antutu Benchmark</a></p>
+            <p><a href="index.php?page=controller_user&op=list&or=birthdate">Fecha de presentacion</a></p>
+            <p><a href="index.php?page=controller_user&op=list&or=screen">Tamaño de pantalla</a></p>
+            </div>
+            </div>
     		<table>
           
                  
@@ -14,7 +37,7 @@
                     if ($rdo->num_rows === 0){
                        
                         echo '<tr>';
-                        echo '<td align="center"  colspan="3">NO HAY NINGUN USUARIO</td>';
+                        echo '<td align="center"  colspan="3">NO HAY TELEFONOS EN LA BASE DE DATOS</td>';
                         echo '</tr>';
                     }else{
                         foreach ($rdo as $row) {

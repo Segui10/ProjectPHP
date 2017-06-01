@@ -6,7 +6,17 @@
         case 'list';
             try{
                 $daouser = new DAOUser();
-            	$rdo = $daouser->select_all_user();
+                if (isset($_GET['so'])){
+                    $rdo = $daouser->select_so_user($_GET['so']);
+                
+                } elseif (isset($_GET['or'])){
+                    $rdo = $daouser->select_order_user($_GET['or']);
+                }else{
+                    $rdo = $daouser->select_all_user();
+                }
+                
+            	
+
             }catch (Exception $e){
                 $callback = 'index.php?page=503';
 			    die('<script>window.location.href="'.$callback .'";</script>');

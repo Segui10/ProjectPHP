@@ -33,14 +33,29 @@
 		}
 		
 		function select_all_user(){
-			$sql = "SELECT * FROM usuario ORDER BY user ASC";
+			$sql = "SELECT * FROM usuario ORDER BY user ASC ";
 			
 			$conexion = connect::con();
             $res = mysqli_query($conexion, $sql);
             connect::close($conexion);
             return $res;
 		}
-		
+		function select_so_user($so){
+            $sql = "SELECT * FROM usuario WHERE sisop='$so' ORDER BY user ASC ";
+            
+            $conexion = connect::con();
+            $res = mysqli_query($conexion, $sql);
+            connect::close($conexion);
+            return $res;
+        }
+        function select_order_user($so){
+            $sql = "SELECT * FROM usuario ORDER BY $so ASC ";
+            
+            $conexion = connect::con();
+            $res = mysqli_query($conexion, $sql);
+            connect::close($conexion);
+            return $res;
+        }
 		function select_user($user){
 			$sql = "SELECT * FROM usuario WHERE user='$user'";
 			

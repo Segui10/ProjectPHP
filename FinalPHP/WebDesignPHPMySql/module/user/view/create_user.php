@@ -4,7 +4,7 @@
         <h1>Usuario nuevo</h1>
         <fieldset>
                 <p>
-                Id: 
+                <label for="usuario">Id: </label>
                 <input type="text" id="usuario" name="usuario" placeholder="id" value=""/>
                 <font color="red">
                     <span id="error_usuario" class="error">
@@ -14,69 +14,69 @@
                     </span>
                 </font>
             </p>
-            <tr>
-                <td>Sistema Operativo: </td>
-                <td><select id="sisop" name="sisop" placeholder="sisop">
+            <p>
+                <label for="so"> Sistema Operativo:</label>
+                <select id="sisop" name="sisop" placeholder="sisop">
                     <option value="Android">Android</option>
                     <option value="IOS">IOs</option>
-                    <option value="WinPhone">Windows Phone</option>
+                    <option value="Windows Phone">Windows Phone</option>
                     </select></td>
-                <td><font color="red">
+                <font color="red">
                     <span id="error_sisop" class="error">
                        
                     </span>
-                </font></td>
-            </tr>
-             <tr>
-                <td>Marca: </td>
-                <td><input type="text" id="marca" name="marca" placeholder="marca" value=""/></td>
-                <td><font color="red">
+                </font>
+            </p>
+             <p>
+                <label for="nombre"> Marca: </label>
+                <input type="text" id="marca" name="marca" placeholder="marca" value=""/>
+                <font color="red">
                     <span id="error_marca" class="error">
                        <?php
                            echo $error['marca']
                         ?>
                     </span>
-                </font></td>
-            </tr>
-            <tr>
-                <td>Modelo: </td>
-                <td><input type="text" id="model" name="model" placeholder="model" value=""/></td>
-                <td><font color="red">
+                </font>
+            </p>
+            <p>
+                <label for="nombre"> Modelo: </label>
+                <input type="text" id="model" name="model" placeholder="model" value=""/>
+                <font color="red">
                     <span id="error_model" class="error">
                        <?php
                            echo $error['model']
                         ?>
                     </span>
-                </font></td>
-            </tr>
-            <tr>
-                <td>Tamaño de pantalla: </td>
-                <td><input type="radio" id="screty" name="screty" placeholder="screty" value="3.5" checked/>3.5"
+                </font>
+            </p>
+            <p>
+                <label for="so"> Tamaño de la pantalla:</label>
+                <input type="radio" id="screty" name="screty" placeholder="screty" value="3.5" checked/>3.5"
                     <input type="radio" id="screty" name="screty" placeholder="screty" value="4"/>4"
                     <input type="radio" id="screty" name="screty" placeholder="screty" value="4.5"/>4.5"
                     <input type="radio" id="screty" name="screty" placeholder="screty" value="5"/>5"
                     <input type="radio" id="screty" name="screty" placeholder="screty" value="5.5"/>5.5"
                     <input type="radio" id="screty" name="screty" placeholder="screty" value="6"/>6"
-                    <input type="radio" id="screty" name="screty" placeholder="screty" value="6.5"/>6.5"</td>
-                <td><font color="red">
+                    <input type="radio" id="screty" name="screty" placeholder="screty" value="6.5"/>6.5"
+                <font color="red">
                     <span id="error_screty" class="error">
                        
                     </span>
-                </font></td>
-            </tr>
-            <tr>
-                <td>Tipo de pantalla: </td>
-                <td><input type="text" id="sty" name="sty" placeholder="sty" value=""/></td>
-                <td><font color="red">
+                </font>
+            </p>
+            <p>
+                Tipo de pantalla: 
+                <input type="text" id="sty" name="sty" placeholder="sty" value=""/></td>
+                <font color="red">
                     <span id="error_sty" class="error">
                         <?php
                            echo $error['sty']
                         ?>
                     </span>
-                </font></td>
-            </tr>
+                </font>
+            </p>
             <p>
-               <label for="so"> Resolucion de la pantalla:</label>
+               <label for="so">Resolucion de la pantalla:</label>
            
                 <select id="repan" name="repan" placeholder="repan">
                     <option value="320 x 480">320 x 480</option>
@@ -91,123 +91,116 @@
                     </span>
                 
             </p>
-            <tr>
-                <td>Tipo de Procesador: </td>
-                <td><input type="text" id="pro" name="pro" placeholder="pro" value=""/></td>
-                <td><font color="red">
+            <p>
+                <label for="nombre">   Tipo Procesador:    </label>
+                <input type="text" id="pro" name="pro" placeholder="pro" value=""/>
+                <font color="red">
                     <span id="error_pro" class="error">
                         <?php
                            echo $error['pro']
                         ?>
                     </span>
-                </font></td>
-            </tr>
+                </font>
+            </p>
 
-            <tr>
-            <td>Numero de Cores: </td>
-                <td><input type="text" id="core" name="core" placeholder="core" value=""/></td>
-                <td><font color="red">
+            <p>
+            <label for="nombre">   Numero de Cores:    </label>
+                <input type="text" id="core" name="core" placeholder="core" value=""/>
+                <font color="red">
                     <span id="error_core" class="error">
                         <?php
                            echo $error['core']
                         ?>
                     </span>
-                </font></td>
-            </tr>
-            <td>Velocidad de los Cores: </td>
-                <td><input type="text" id="speed_c" name="speed_c" placeholder="speed_c" value=""/></td>
-                <td><font color="red">
+                </font>
+            </p>
+            <p>
+            <label for="nombre">Velocidad de los Cores:</label> 
+                <input type="text" id="speed_c" name="speed_c" placeholder="speed_c" value=""/>
+                <font color="red">
                     <span id="error_speed" class="error">
                         <?php
                            echo $error['speed']
                         ?>
                     </span>
-                </font></td>
-            </tr>
+                </font>
+            
+            </p>
             
             
-            <tr>
-                <td>Fecha de presentacion: </td>
-                <td><input id="fecha" type="text" name="fecha_nacimiento" placeholder="fecha de nacimiento" value=""/></td>
-                <td><font color="red">
+            <p>
+                <label for="nombre">   Fecha de nacimiento:     </label>
+                <input id="fecha" type="text" name="fecha_nacimiento" placeholder="fecha de nacimiento" value=""/>
+                <font color="red">
                     <span id="error_fecha_nacimiento" class="error">
                         <?php
                          echo $error['fecha_nacimiento']
                         ?>
                     </span>
-                </font></td>
-            </tr>
+                </font>
             
+            </p>
             
-            <tr>
-                <td>Pais: </td>
-                <td><select id="pais" name="pais" placeholder="pais">
+            <p>
+                <label for="nombre">    Pais:   </label>
+                <select id="pais" name="pais" placeholder="pais">
                     <option value="España">España</option>
                     <option value="Portugal">Portugal</option>
                     <option value="Francia">Francia</option>
-                    </select></td>
-                <td><font color="red">
+                    </select>
+               <font color="red">
                     <span id="error_pais" class="error">
                        
                     </span>
-                </font></td>
-            </tr>
+                </font>
+            </p>
 
             
-            <tr>
-                <td>Observaciones: </td>
-                <td><textarea cols="30" rows="5" id="observaciones" name="observaciones" placeholder="observaciones" value=""></textarea></td>
-                <td><font color="red">
+            <p>
+                <label for="nombre">      Observaciones:   </label>
+                <textarea cols="30" rows="5" id="observaciones" name="observaciones" placeholder="observaciones" value=""></textarea>
+                <font color="red">
                     <span id="error_observaciones" class="error">
                        <?php
                          echo $error['observaciones']
                         ?>
                     </span>
-                </font></td>
-            </tr>
-            <tr>
-                <td>Url imagen: </td>
-                <td><input type="text" id="urlimg" name="urlimg" placeholder="urlimg" value=""/></td>
-                <td><font color="red">
+                </font>
+            </p>
+            <p>
+                <label for="nombre">      Url imagen:    </label>
+                <input type="text" id="urlimg" name="urlimg" placeholder="urlimg" value=""/>
+                <font color="red">
                     <span id="error_urlimg" class="error">
                         
                     </span>
-                </font></td>
-            </tr>
-            <tr>
-                <td>Antutu benchmark: </td>
-                <td><input type="text" id="antutu" name="antutu" placeholder="antutu" value=""/></td>
-                <td><font color="red">
+                </font>
+            </p>
+            <p>
+                <label for="nombre">Antutu benchmark: </label>
+                <input type="text" id="antutu" name="antutu" placeholder="antutu" value=""/>
+                <font color="red">
                     <span id="error_antutu" class="error">
                        <?php
                          echo $error['antutu']
                         ?> 
                     </span>
-                </font></td>
-            </tr>
-              <tr>
-                <td>Cobertura: </td>
-                <td><input type="checkbox" id="aficion[]" name="aficion[]" placeholder= "aficion" value="2G"/>2G
+                </font>
+            </p>
+             <p>
+                <label for="nombre">Cobertura: </label>
+                <input type="checkbox" id="aficion[]" name="aficion[]" placeholder= "aficion" value="2G"/>2G
                     <input type="checkbox" id="aficion[]" name="aficion[]" placeholder= "aficion" value="3G"/>3G
-                    <input type="checkbox" id="aficion[]" name="aficion[]" placeholder= "aficion" value="4G"/>4G</td>
-                <td><font color="red">
-                    <span id="error_aficion" class="error">
-                        <?php
-                             echo $error['aficion']
-                        ?>
-                    </span>
-                </font></font></td>
-            </tr>
-            
-                <td><font color="red">
+                    <input type="checkbox" id="aficion[]" name="aficion[]" placeholder= "aficion" value="4G"/>4G
+                <font color="red">
                     <span id="error_aficion" class="error">
                         
-                </font></font></td>
-            </tr>
-            <tr>
-                <td><input type="submit" name="create" id="create"/></td>
-                <td align="right"><a href="index.php?page=controller_user&op=list">Volver</a></td>
-            </tr>
-        </table>
+                    </span>
+                </font>
+            </p>
+            
+                <input type="submit" name="create" id="create"/>
+                <a href="index.php?page=controller_user&op=list">Volver</a>
+            
     </form>
 </div>

@@ -1,36 +1,76 @@
 <?php
     function validate_usuario($texto){
-        $reg="/^[a-zA-Z0-9]*$/";
+        if(empty($texto)){
+            return false;
+        }else{
+            $reg="/^[a-zA-Z0-9]*$/";
         return preg_match($reg,$texto);
+        }
+        
     }
  
    function validate_marca($texto){
-    $reg="/^[a-zA-Z0-9]*$/";
+    if(empty($texto)){
+            return false;
+        }else{
+            $reg="/^[a-zA-Z0-9]*$/";
         return preg_match($reg,$texto);
+        }
+    
    }
    function validate_modelo($texto){
-    $reg="/^[a-zA-Z0-9]*$/";
+    if(empty($texto)){
+            return false;
+        }else{
+            $reg="/^[a-zA-Z0-9]*$/";
         return preg_match($reg,$texto);
+        }
+    
    }
    function validate_sty($texto){
-    $reg="/^[a-zA-Z0-9]*$/";
+    if(empty($texto)){
+            return false;
+        }else{
+            $reg="/^[a-zA-Z0-9]*$/";
         return preg_match($reg,$texto);
+        }
+    
    }
    function validate_pro($texto){
-    $reg="/^[a-zA-Z0-9]*$/";
+    if(empty($texto)){
+            return false;
+        }else{
+            $reg="/^[a-zA-Z0-9]*$/";
         return preg_match($reg,$texto);
+        }
+    
    }
    function validate_cores($texto){
-    $reg="/^[0-9]*$/";
+    if(empty($texto)){
+            return false;
+        }else{
+            $reg="/^[0-9]*$/";
         return preg_match($reg,$texto);
+        }
+    
    }
    function validate_speed($texto){
-    $reg="/^[a-zA-Z0-9]*$/";
+    if(empty($texto)){
+            return false;
+        }else{
+            $reg="/^[a-zA-Z0-9]*$/";
         return preg_match($reg,$texto);
+        }
+    
    }
     function validate_nombre($texto){
-        $reg="/^[a-zA-Z]*$/";
+        if(empty($texto)){
+            return false;
+        }else{
+            $reg="/^[a-zA-Z]*$/";
         return preg_match($reg,$texto);
+        }
+        
     }
     
     
@@ -90,37 +130,37 @@
         //$r_aficion=validate_aficion($v_aficion);
 
         if($r_usuario !== 1){
-            $error_usuario = " * El usuario introducido no es valido";
+            $error_usuario = " * El usuario introducido no es validophp";
             $check=false;
         }else{
             $error_usuario = "";
         }
         if($r_marca !== 1){
-            $error_marca = " * La marca introducida no es valida";
+            $error_marca = " * La marca introducida no es validaphp";
             $check=false;
         }else{
             $error_marca = "";
         }
         if($r_model !== 1){
-            $error_model = " * El modelo introducido no es valido";
+            $error_model = " * El modelo introducido no es validophp";
             $check=false;
         }else{
             $error_model = "";
         }
         if($r_sty !== 1){
-            $error_sty = " * El tipo de pantalla introducido no es valido";
+            $error_sty = " * El tipo de pantalla introducido no es validophp";
             $check=false;
         }else{
             $error_sty = "";
         }
          if($r_pro !== 1){
-            $error_pro = " * El procesador introducido no es valido";
+            $error_pro = " * El procesador introducido no es validophp";
             $check=false;
         }else{
             $error_pro = "";
         }
         if($r_core !== 1){
-            $error_core = " * El core introducido no es valido";
+            $error_core = " * El core introducido no es validophp";
             $check=false;
         }else{
             $error_core = "";
@@ -132,19 +172,19 @@
             $error_speed = "";
         }
         if($r_antutu !== 1){
-            $error_antutu = " * La puntuacion de antutu introducida no es valida";
+            $error_antutu = " * La puntuacion de antutu introducida no es validaphp";
             $check=false;
         }else{
             $error_antutu = "";
         }
         if(!$r_fecha_nacimiento){
-            $error_fecha_nacimiento = " * No has introducido ninguna fecha";
+            $error_fecha_nacimiento = " * No has introducido ninguna fechaphp";
             $check=false;
         }else{
             $error_fecha_nacimiento = "";
         }
         if(!$r_observaciones){
-            $error_observaciones = " * El texto introducido no es valido";
+            $error_observaciones = " * El texto introducido no es validophp";
             $check=false;
         }else{
             $error_observaciones = "";
