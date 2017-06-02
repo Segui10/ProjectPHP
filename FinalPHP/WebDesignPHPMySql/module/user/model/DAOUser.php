@@ -49,7 +49,23 @@
             return $res;
         }
         function select_order_user($so){
-            $sql = "SELECT * FROM usuario ORDER BY $so ASC ";
+            $sql = "SELECT * FROM usuario ORDER BY $so DESC ";
+            
+            $conexion = connect::con();
+            $res = mysqli_query($conexion, $sql);
+            connect::close($conexion);
+            return $res;
+        }
+        function update_fav($fav,$user){
+            $sql = "UPDATE usuario SET fav=$fav WHERE user='$user'";
+            
+            $conexion = connect::con();
+            $res = mysqli_query($conexion, $sql);
+            connect::close($conexion);
+            return $res;
+        }
+        function select_favs(){
+            $sql = "SELECT * FROM usuario WHERE fav='1'";
             
             $conexion = connect::con();
             $res = mysqli_query($conexion, $sql);

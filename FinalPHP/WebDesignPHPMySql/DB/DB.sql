@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `sisop` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `marca` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `model` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `screen` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `screen` int COLLATE utf8_spanish_ci NOT NULL,
   `sty` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `repan` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `pro` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
@@ -41,8 +41,9 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `country` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
   `comment` varchar(500) COLLATE utf8_spanish_ci NOT NULL,
   `urlimg` varchar(500) COLLATE utf8_spanish_ci NOT NULL,
-  `antutu` varchar(500) COLLATE utf8_spanish_ci NOT NULL,
+  `antutu` int COLLATE utf8_spanish_ci NOT NULL,
   `cober` varchar(500) COLLATE utf8_spanish_ci NOT NULL,
+  `fav`boolean COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -50,10 +51,10 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`user`,`sisop`,`marca`,`model`,`screen`,`sty`,`repan`,`pro`,`core`,`speed`, `birthdate`, `country`, `comment`,`urlimg`,`antutu`,`cober`) VALUES
-('ancoca','Android','marca','galaxy','5','IPS','320 x 480','snapdragon','5','2,4', '19/07/1993', 'Francia', 'Welcome to this page','https://d2giyh01gjb6fi.cloudfront.net/phone_front/0001/08/thumb_7881_phone_front_big.jpeg','50000','2G'),
-('daurgil','Android','marca2','galaxy','5','IPS','320 x 480','snapdragon','4','3,1', '06/06/1990', 'EspaÃ±a', 'Hoal mundo','https://d2giyh01gjb6fi.cloudfront.net/phone_front/0001/35/thumb_34632_phone_front_big.jpeg','400000','3G'),
-('usuario','Windows Phone','marca3','galaxy','5','320 x 480','IPS','snapdragon','6','2,1', '16/05/1980', 'EspaÃ±a', 'Adios mundo','https://d2giyh01gjb6fi.cloudfront.net/phone_front/0001/67/thumb_66416_phone_front_big.jpeg','10','3G');
+INSERT INTO `usuario` (`user`,`sisop`,`marca`,`model`,`screen`,`sty`,`repan`,`pro`,`core`,`speed`, `birthdate`, `country`, `comment`,`urlimg`,`antutu`,`cober`,`fav`) VALUES
+('ancoca','Android','marca','galaxy','5','IPS','320 x 480','snapdragon','5','2,4', '19/07/1993', 'Francia', 'Welcome to this page','https://d2giyh01gjb6fi.cloudfront.net/phone_front/0001/08/thumb_7881_phone_front_big.jpeg','50000','2G',true),
+('daurgil','Android','marca2','galaxy','5','IPS','320 x 480','snapdragon','4','3,1', '06/06/1990', 'EspaÃ±a', 'Hoal mundo','https://d2giyh01gjb6fi.cloudfront.net/phone_front/0001/35/thumb_34632_phone_front_big.jpeg','400000','3G',false),
+('usuario','Windows Phone','marca3','galaxy','5','320 x 480','IPS','snapdragon','6','2,1', '16/05/1980', 'EspaÃ±a', 'Adios mundo','https://d2giyh01gjb6fi.cloudfront.net/phone_front/0001/67/thumb_66416_phone_front_big.jpeg','10','3G',true);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

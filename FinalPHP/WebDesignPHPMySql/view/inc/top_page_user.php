@@ -19,6 +19,8 @@
         		});
         	});
 	    </script>
+        
+
 	    <link href="view/css/style.css" rel="stylesheet" type="text/css" />
 	    <script src="module/user/model/validate_user.js"></script>
     </head>

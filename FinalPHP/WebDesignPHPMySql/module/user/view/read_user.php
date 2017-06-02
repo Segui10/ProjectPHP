@@ -1,6 +1,36 @@
 <div id="contenido">
+
+<?php
+if(isset($_GET['fav'])){
+    if($_GET['fav']==0){
+    echo '<div class="alert info">';
+      echo '<span class="closebtn">&times;</span> ' ;
+      echo '<strong>Vaya!</strong> Acabas de eliminar el mobil de favoritos.';
+    echo '</div>';
+} elseif($_GET['fav']==1) {
+    echo '<div class="alert success">';
+    echo '<span class="closebtn">&times;</span>';
+    echo '<strong>Perfecto!</strong> Se ha añadido el telefono a favoritos.';
+    echo '</div>';
+}
+}
+?>
+       <script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+}
+</script>
     <h1>Mobile summary</h1>
+
     <div class="conte">
+
         <div class="general">
         <table class="ctable">
             <tr><td><?php echo '<img class="readima" src="'.$user['urlimg'].'"/>'; ?></td>
@@ -86,12 +116,33 @@
                 <p><b>Overview</b></p>
                 <hr>
                 <p><?php echo $user['comment']; ?></p>
+                
                 </div>
+            </div>
+            <div class="favorite">
+               <p><b>Favorite</b></p>
+               <hr>
+                
+                    <?php
+                    
+                    if($user['fav']==1) {
+                        echo '<div class="readdelete">';
+                        echo '<a href="index.php?page=controller_user&op=read&id='.$user['user'].'&fav=0">-</a>';
+                        echo '</div>';
+                    }elseif($user['fav']==0) {
+                         echo '<div class="readfavins">';
+                        echo '<a href="index.php?page=controller_user&op=read&id='.$user['user'].'&fav=1">+</a>';
+                        echo '</div>';
+                    }
+                    ?>
+            
             </div>
              </div>
         </div>
     </div>
+    
     <p>
+            
     <!--<table border='2'>
         <tr>
             <td>Usuario: </td>

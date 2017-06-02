@@ -10,12 +10,16 @@
             </div>
             <div class="search">
             <h1>Filtros:</h1>
+            <p>Favoritos:<p>
+            <div class="and">
+            <p><a href="index.php?page=controller_user&op=list&fav=t">Favoritos</a></p>
+            </div>
             <p>Dispositivos: </p>
             <div class="and">
             <p><a href="index.php?page=controller_user&op=list&so=Android">Dispositivos Android</a></p>
             </div>
             <div class="win">
-            <p><a href="index.php?page=controller_user&op=list&so=Windows Phone">Dispositivos Windows Phone</a></p>
+            <p><a href="index.php?page=controller_user&op=list&so=Windows Phone">Dispositivos Windows &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
             </div>
             <div class="ios">
             <p><a href="index.php?page=controller_user&op=list&so=IOS">Dispositivos IOs</a></p>
@@ -26,7 +30,6 @@
             <p>Ordenar</p>
             <div class="and">
             <p><a href="index.php?page=controller_user&op=list&or=antutu">Antutu Benchmark</a></p>
-            <p><a href="index.php?page=controller_user&op=list&or=birthdate">Fecha de presentacion</a></p>
             <p><a href="index.php?page=controller_user&op=list&or=screen">Tamaño de pantalla</a></p>
             </div>
             </div>

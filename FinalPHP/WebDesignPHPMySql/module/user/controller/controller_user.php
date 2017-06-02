@@ -1,7 +1,6 @@
 <?php
     include ("module/user/model/DAOUser.php");
 
-
     switch($_GET['op']){
         case 'list';
             try{
@@ -11,10 +10,12 @@
                 
                 } elseif (isset($_GET['or'])){
                     $rdo = $daouser->select_order_user($_GET['or']);
-                }else{
-                    $rdo = $daouser->select_all_user();
+                } elseif (isset($_GET['fav'])){
+                   $rdo=$daouser->select_favs();
+                }else {
+                     $rdo = $daouser->select_all_user();
                 }
-                
+
             	
 
             }catch (Exception $e){
@@ -63,7 +64,8 @@
                     }
                     
 		            if($rdo){
-            			echo '<script language="javascript">alert("Registrado en la base de datos correctamente")</script>';
+            			
+                        echo '<script language="javascript">alert("Registrado en la base de datos correctamente")</script>';
             			$callback = 'index.php?page=controller_user&op=list';
         			    die('<script>window.location.href="'.$callback .'";</script>');
             		}else{
@@ -142,6 +144,9 @@
         case 'read';
             try{
                 $daouser = new DAOUser();
+                if (isset($_GET['fav'])){
+                    $rdo=$daouser->update_fav($_GET['fav'],$_GET['id']);
+                }
             	$rdo = $daouser->select_user($_GET['id']);
             	$user=get_object_vars($rdo);
             }catch (Exception $e){
