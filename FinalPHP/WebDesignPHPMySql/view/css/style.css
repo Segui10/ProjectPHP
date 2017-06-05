@@ -124,8 +124,11 @@ background-color: #333;
   bottom: 0;
 
   width: 100%;
-  color: white;
+  
     
+}
+.foo-icons {
+  padding-top: 1%;
 }
 #contenido h1 {
 
@@ -982,71 +985,17 @@ height: 23px;
 }
 
 
-
-    #slides .slidesjs-navigation {
-      margin-top:3px;
-    }
-
-    #slides .slidesjs-previous {
-      margin-right: 5px;
-      float: left;
-    }
-
-    #slides .slidesjs-next {
-      margin-right: 5px;
-      float: left;
-    }
-
-    .slidesjs-pagination {
-      margin: 6px 0 0;
-      float: right;
-      list-style: none;
-    }
-
-    .slidesjs-pagination li {
-      float: left;
-      margin: 0 1px;
-    }
-
-    .slidesjs-pagination li a {
-      display: block;
-      width: 13px;
-      height: 0;
-      padding-top: 13px;
-      background-image: url(img/pagination.png);
-      background-position: 0 0;
-      float: left;
-      overflow: hidden;
-    }
-
-    .slidesjs-pagination li a.active,
-    .slidesjs-pagination li a:hover.active {
-      background-position: 0 -13px
-    }
-
-    .slidesjs-pagination li a:hover {
-      background-position: 0 -26px
-    }
-
-    #slides a:link,
-    #slides a:visited {
-      color: #333
-    }
-
-    #slides a:hover,
-    #slides a:active {
-      color: #9e2020
-    }
-
-    .navbar {
-      overflow: hidden
-    }
+ h2 {
+  font-size:40px;
+  text-align: center;
+}
 .slideshow-container {
   
-  position: relative;
-  margin: auto;
-  width: 100%;
-  margin:0 auto;
+ margin-top: 2%;
+  
+margin-left: 25%;
+  
+
 }
 
 /* Caption text */
@@ -1058,6 +1007,7 @@ height: 23px;
   bottom: 8px;
   width: 100%;
   text-align: center;
+
 }
 
 /* Number text (1/3 etc) */
@@ -1067,6 +1017,7 @@ height: 23px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
+
 }
 
 /* The dots/bullets/indicators */
@@ -1078,6 +1029,7 @@ height: 23px;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+  margin-left: 23%;
 }
 
 .active {

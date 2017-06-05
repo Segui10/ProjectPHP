@@ -1,24 +1,23 @@
 <div id="contenido">
-<h2>Automatic Slideshow</h2>
-<p>Change image every 2 seconds:</p>
+<h2>InfoMobile</h2>
 
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="http://www.prophone.cl/wp-content/uploads/2015/06/logo-samsung-nueo-300x150.png" style="width:300px">
+  <div class="numbertext"></div>
+  <img src="https://cdn4.cnet.com/img/AVSpk30o9vxRTG-eEgKHmUCbG3I=/830x467/2017/03/27/a4184fe4-5fa0-4a57-b0b2-3bb5601ef536/gsocho-ny-19-jg.jpg" style="width:600px">
   <div class="text">Caption Text</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Huawei.svg/1200px-Huawei.svg.png" style="width:300px;">
+  <div class="numbertext"></div>
+  <img src="http://www.adobotech.net/wp-content/uploads/2017/02/adobotech-huawei-P10-cover.jpg" style="width:600px;">
   <div class="text">Caption Two</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="https://www.apple.com/ac/structured-data/images/open_graph_logo.png?201705250938" style="width:300px;">
+  <div class="numbertext"></div>
+  <img src="http://www.finanzas.com/archivos/201609/iphone-7.jpg" style="width:600px;">
   <div class="text">Caption Three</div>
 </div>
 
