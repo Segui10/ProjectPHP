@@ -1,7 +1,7 @@
 <div id="contenido">
     <div class="container">
     	<div class="row">
-    			<h3>LISTA DE USUARIOS</h3>
+    			<h3>LISTA DE MÓVILES</h3>
     	</div>
     	<div class="row">
     	    <div class="create">

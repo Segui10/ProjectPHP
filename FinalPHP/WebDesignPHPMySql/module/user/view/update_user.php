@@ -1,5 +1,10 @@
 <div id="contenido">
     <form autocomplete="on" method="post" name="aupdate_user" id="update_user" onsubmit="return validate();" action="index.php?page=controller_user&op=update">
+  
+
+      
+       
+    
         <h1>Modificar usuario</h1>
         
             <p>
@@ -294,49 +299,6 @@
                         </span>
                 </font></font>
             </p>
-            <p>
-                Aficiones: 
-                <?php
-                    $afi=explode(":", $user['cober']);
-                ?>
-                
-                    <?php
-                        $busca_array=in_array("2G", $afi);
-                        if($busca_array){
-                    ?>
-                        <input type="checkbox" id= "aficion[]" name="aficion[]" value="2G" checked/>2G
-                    <?php
-                        }else{
-                    ?>
-                        <input type="checkbox" id= "aficion[]" name="aficion[]" value="2G"/>2G
-                    <?php
-                        }
-                    ?>
-                    <?php
-                        $busca_array=in_array("3G", $afi);
-                        if($busca_array){
-                    ?>
-                        <input type="checkbox" id= "aficion[]" name="aficion[]" value="3G" checked/>3G
-                    <?php
-                        }else{
-                    ?>
-                        <input type="checkbox" id= "aficion[]" name="aficion[]" value="3G"/>3G
-                    <?php
-                        }
-                    ?>
-                    <?php
-                        $busca_array=in_array("4G", $afi);
-                        if($busca_array){
-                    ?>
-                        <input type="checkbox" id= "aficion[]" name="aficion[]" value="4G" checked/>4G
-                    <?php
-                        }else{
-                    ?>
-                    <input type="checkbox" id= "aficion[]" name="aficion[]" value="4G"/>4G
-                    <?php
-                        }
-                    ?>
-                </p>
                  <p>
                 Urlimg: 
                 <input type="text" id="email" name="email" placeholder="email" value="<?php echo $user['email'];?>"/>

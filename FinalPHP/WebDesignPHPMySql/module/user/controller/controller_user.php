@@ -48,6 +48,7 @@
                     'fecha_nacimiento' => '',
                     'observaciones' => '',
                     'email' => ''
+                   
                     
                     );
             //$check = true;
@@ -99,6 +100,7 @@
                     'fecha_nacimiento' => '',
                     'observaciones' => '',
                     'email' => ''
+
                     );
             //$check = true;
             

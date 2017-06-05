@@ -336,11 +336,15 @@ height: 23px;
 }
 
 .styerror {
-    color: #ff0000;
+  background-color: #FE2E2E;
+    color: white;
+    font-style: bold;
 	font-family: 'Nunito', sans-serif;
     font-size: 10pt;
     font-style:italic;
+
 }
+
 fieldset {
   margin-bottom: 30px;
   border: none;

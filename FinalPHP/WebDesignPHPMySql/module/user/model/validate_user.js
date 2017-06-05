@@ -140,22 +140,28 @@ function validate_observaciones(texto){
     return false;
 }
 
-function validate_aficion(array){
-    var i;
-    var ok=0;
-    for(i=0; i<array.length;i++){
-        if(array[i].checked){
-            ok=1
+function validate_aficion(v_aficion){
+
+   var len = v_aficion.length;
+   var ch = 0;
+    for (var i=0; i<len; i++) {
+        if (v_aficion[i].checked){
+           alert("Si");
+           ch++;
+        }else{
+           alert("No");
         }
+        }
+        if (ch > 0){
+            return true;
+        }else {
+            return false;
+        }
+       
+       // alert(i + (v_aficion[i].checked?' checked ':' unchecked ') + v_aficion[i].value);
+
+    
     }
- 
-    if(ok==1){
-        return true;
-    }
-    if(ok==0){
-        return false;
-    }
-}
 function validate_email(email) {
     if (email.length > 0) {
         var regexp = /^[A-Z0-9._%+-]+@(?:[A-Z0-9-]+.)+[A-Z]{2,4}$/i;
@@ -177,7 +183,7 @@ function validate(){
     var v_observaciones=document.getElementById('observaciones').value;
     var v_antutu=document.getElementById('antutu').value;
     var v_email=document.getElementById('email').value;
-    //var v_aficion=document.getElementsByName('aficion[]').value;
+    //var v_aficion=document.getElementsByName('aficion[]');
    
     
     var r_usuario=validate_usuario(v_usuario);
@@ -191,7 +197,9 @@ function validate(){
     var r_observaciones=validate_observaciones(v_observaciones);
     var r_antutu=validate_antutu(v_antutu);
     var r_email=validate_email(v_email);
-    //var r_aficion=validate_aficion(v_aficion);
+  
+   //var r_aficion=validate_aficion(v_aficion);
+    
 
     if(!r_usuario){
         document.getElementById('error_usuario').innerHTML = " * Please only numbers and letters";
@@ -256,7 +264,7 @@ function validate(){
         document.getElementById('error_observaciones').innerHTML = "";
     }
     if(!r_antutu){
-        document.getElementById('error_antutu').innerHTML = " * Only numbers please";
+        document.getElementById('error_antutu').innerHTML = " * Only numbers, please";
         check=false;
     }else{
         document.getElementById('error_antutu').innerHTML = "";
@@ -267,12 +275,13 @@ function validate(){
     }else{
         document.getElementById('error_email').innerHTML = "";
     }
-     /* if(!r_aficion){
+   /* alert("Entra");
+      if(r_aficion === false){
         document.getElementById('error_aficion').innerHTML = " * No has seleccionado ninguna aficionjs";
         check=false;
     }else{
         document.getElementById('error_aficion').innerHTML = "";
-    }
-    */
+    }*/
+    
     return check;
 }

@@ -187,17 +187,7 @@
                     </span>
                 </font>
             </p>
-             <p>
-                <label for="nombre">Cobertura: </label>
-                <input type="checkbox" id="aficion[]" name="aficion[]" placeholder= "aficion" value="2G"/>2G
-                    <input type="checkbox" id="aficion[]" name="aficion[]" placeholder= "aficion" value="3G"/>3G
-                    <input type="checkbox" id="aficion[]" name="aficion[]" placeholder= "aficion" value="4G"/>4G
-                <font color="red">
-                    <span id="error_aficion" class="error">
-                        
-                    </span>
-                </font>
-            </p>
+             
             <p>
                 <label for="nombre">Correo: </label>
                 <input type="text" id="email" name="email" placeholder="email" value=""/>
