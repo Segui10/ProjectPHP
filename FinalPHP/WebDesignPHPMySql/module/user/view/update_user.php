@@ -224,8 +224,8 @@
             
             
             <p>
-                Fecha de nacimiento: 
-                <input  type="text" id="fecha"  name="fecha_nacimiento" placeholder="fecha de nacimiento" value="<?php echo $user['birthdate'];?>"/>
+                Fecha de presentacion: 
+                <input  type="text" id="fecha"  name="fecha_nacimiento" placeholder="Fecha de presentacion" value="<?php echo $user['birthdate'];?>"/>
                 <font color="red">
                     <span id="error_fecha_nacimiento" class="error"/>
                         <?php

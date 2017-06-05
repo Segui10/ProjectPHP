@@ -129,8 +129,8 @@
             
             
             <p>
-                <label for="nombre">   Fecha de nacimiento:     </label>
-                <input id="fecha" type="text" name="fecha_nacimiento" placeholder="fecha de nacimiento" value=""/>
+                <label for="nombre">   Fecha de presentacion:     </label>
+                <input id="fecha" type="text" name="fecha_nacimiento" placeholder="Fecha de presentacion" value=""/>
                 <font color="red">
                     <span id="error_fecha_nacimiento" class="error">
                         <?php

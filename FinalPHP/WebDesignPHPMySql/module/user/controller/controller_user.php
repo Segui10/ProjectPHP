@@ -1,6 +1,6 @@
 <?php
     include ("module/user/model/DAOUser.php");
-    include ("module/user/utils/mailgun.php");
+    include ("utils/mailgun.php");
 
     switch($_GET['op']){
         case 'list';
