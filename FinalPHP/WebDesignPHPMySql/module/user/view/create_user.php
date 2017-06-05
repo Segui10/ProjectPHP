@@ -201,7 +201,7 @@
             </p>
             
                 <input type="submit" name="create" id="create"/>
-                <a href="index.php?page=controller_user&op=list">Volver</a>
+                <a class="Button_red" href="index.php?page=controller_user&op=list">Volver</a>
             
     </form>
 </div>

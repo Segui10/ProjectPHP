@@ -308,7 +308,7 @@
                 </font></font>
             </p>
                 <input type="submit" name="update" id="update"/>
-                <a href="index.php?page=controller_user&op=list">Volver</a>
+                <a class="Button_red" href="index.php?page=controller_user&op=list">Volver</a>
            
     </form>
 </div>
