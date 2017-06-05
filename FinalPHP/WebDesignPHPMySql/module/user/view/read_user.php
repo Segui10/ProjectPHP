@@ -3,7 +3,7 @@
 <?php
 if(isset($_GET['fav'])){
     if($_GET['fav']==0){
-    echo '<div class="alert info">';
+    echo '<div class="alert inf">';
       echo '<span class="closebtn">&times;</span> ' ;
       echo '<strong>Vaya!</strong> Acabas de eliminar el mobil de favoritos.';
     echo '</div>';
@@ -50,7 +50,7 @@ for (i = 0; i < close.length; i++) {
                             </div> 
                         </td>
                         <td><div class="readproc">
-                            <img class="readpro" src="http://d2giyh01gjb6fi.cloudfront.net/images/kifeatures/f_processor_v4.png"/> <b class="cor">x10 Cores</b>
+                            <img class="readpro" src="http://d2giyh01gjb6fi.cloudfront.net/images/kifeatures/f_processor_v4.png"/> <b class="cor">X<?php echo $user['core']; ?> Cores</b>
                         </div></td>
                         <td><div class="readscre">
                             <img class="readscr" src="https://d2giyh01gjb6fi.cloudfront.net/images/kifeatures/f_screen_v2.png"/> <b class="cora"><?php echo $user['screen']; ?></b>
