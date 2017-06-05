@@ -7,6 +7,8 @@
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
     	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        
+
     	<script type="text/javascript">
         	$(function() {
         		$('#fecha').datepicker({
@@ -23,5 +25,6 @@
 
 	    <link href="view/css/style.css" rel="stylesheet" type="text/css" />
 	    <script src="module/user/model/validate_user.js"></script>
+        <script src="module/contact/model/validate_message.js"></script>
     </head>
     <body>

@@ -1,5 +1,5 @@
 <div id="contenido">
-    <form autocomplete="on" method="post" name="alta_user" id="alta_user" onsubmit="return validate();" 
+    <form class="form" autocomplete="on" method="post" name="alta_user" id="alta_user" onsubmit="return validate();" 
           action="index.php?page=controller_user&op=create">
         <h1>Insert mobile</h1>
         <fieldset>
