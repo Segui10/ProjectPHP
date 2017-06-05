@@ -67,9 +67,9 @@
                     }
                     
 		            if($rdo){
-            			//$_SESSION['user']=$_POST;
+            			$_SESSION['user']=$_POST;
 
-                        //$json = send_mailgun($_POST['email'],$_POST['marca'],$_POST['model'],$_POST['usuario'],"create");
+                        $json = send_mailgun($_POST['email'],$_POST['marca'],$_POST['model'],$_POST['usuario'],"create");
                         
                         echo '<script language="javascript">alert("Registrado en la base de datos correctamente")</script>';
             			$callback = 'index.php?page=controller_user&op=list';
@@ -118,9 +118,9 @@
                     }
                     
 		            if($rdo){
-                      // $_SESSION['user']=$_POST;
+                       $_SESSION['user']=$_POST;
 
-                       //$json = send_mailgun($_POST['email'],$_POST['marca'],$_POST['model'],$_POST['usuario'],"update");
+                       $json = send_mailgun($_POST['email'],$_POST['marca'],$_POST['model'],$_POST['usuario'],"update");
             			echo '<script language="javascript">alert("Actualizado en la base de datos correctamente")</script>';
             			$callback = 'index.php?page=controller_user&op=list';
         			    die('<script>window.location.href="'.$callback .'";</script>');
