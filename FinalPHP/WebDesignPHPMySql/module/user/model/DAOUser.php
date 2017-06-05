@@ -24,7 +24,7 @@
                 $cober=$cober."$indice:";
             }
         	$sql = " INSERT INTO usuario (user,sisop, marca,model,screen,sty,repan,pro,core,speed, birthdate, country, comment, urlimg, antutu,cober,email)"
-        		. " VALUES ('$user','$sisop','$marca','$model','$screty','$sty','$repan','$pro','$core','$speed', '$birthdate', '$country', '$comment','$url','$antutu','$cober',$email)";
+        		. " VALUES ('$user','$sisop','$marca','$model','$screty','$sty','$repan','$pro','$core','$speed', '$birthdate', '$country', '$comment','$url','$antutu', '$cober', '$email')";
             
             $conexion = connect::con();
             $res = mysqli_query($conexion, $sql);
