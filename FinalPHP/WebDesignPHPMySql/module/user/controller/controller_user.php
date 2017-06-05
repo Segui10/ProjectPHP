@@ -1,5 +1,6 @@
 <?php
     include ("module/user/model/DAOUser.php");
+    include ("module/user/utils/mailgun.php");
 
     switch($_GET['op']){
         case 'list';
@@ -15,7 +16,7 @@
                 }else {
                      $rdo = $daouser->select_all_user();
                 }
-
+               
             	
 
             }catch (Exception $e){
@@ -45,7 +46,8 @@
                     'speed' => '',
                     'antutu' => '',
                     'fecha_nacimiento' => '',
-                    'observaciones' => ''
+                    'observaciones' => '',
+                    'email' => ''
                     
                     );
             //$check = true;
@@ -64,7 +66,8 @@
                     }
                     
 		            if($rdo){
-            			
+            			 $json = send_mailgun($_SESSION['email']);
+                        
                         echo '<script language="javascript">alert("Registrado en la base de datos correctamente")</script>';
             			$callback = 'index.php?page=controller_user&op=list';
         			    die('<script>window.location.href="'.$callback .'";</script>');
@@ -92,7 +95,8 @@
                     'speed' => '',
                     'antutu' => '',
                     'fecha_nacimiento' => '',
-                    'observaciones' => ''
+                    'observaciones' => '',
+                    'email' => ''
                     );
             //$check = true;
             
@@ -110,6 +114,9 @@
                     }
                     
 		            if($rdo){
+                        $_SESSION['user']=$_POST;
+
+                        $json = send_mailgun($_POST['email']);
             			echo '<script language="javascript">alert("Actualizado en la base de datos correctamente")</script>';
             			$callback = 'index.php?page=controller_user&op=list';
         			    die('<script>window.location.href="'.$callback .'";</script>');

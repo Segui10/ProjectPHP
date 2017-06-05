@@ -1,7 +1,7 @@
 <div id="contenido">
     <form autocomplete="on" method="post" name="alta_user" id="alta_user" onsubmit="return validate();" 
           action="index.php?page=controller_user&op=create">
-        <h1>Usuario nuevo</h1>
+        <h1>Insert mobile</h1>
         <fieldset>
                 <p>
                 <label for="usuario">Id: </label>
@@ -195,6 +195,17 @@
                 <font color="red">
                     <span id="error_aficion" class="error">
                         
+                    </span>
+                </font>
+            </p>
+            <p>
+                <label for="nombre">Correo: </label>
+                <input type="text" id="email" name="email" placeholder="email" value=""/>
+                <font color="red">
+                    <span id="error_email" class="error">
+                       <?php
+                         echo $error['email']
+                        ?> 
                     </span>
                 </font>
             </p>

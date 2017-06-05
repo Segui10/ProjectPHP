@@ -58,7 +58,7 @@
     if(empty($texto)){
             return false;
         }else{
-            $reg="/^[a-zA-Z0-9]*$/";
+            $reg="/^-?[0-9]+([,\.][0-9]*)?$/";
         return preg_match($reg,$texto);
         }
     
@@ -72,8 +72,13 @@
         }
         
     }
-    
-    
+    function validate_email($email){
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    return false;
+    }else{
+        return true;
+    }
+    }
     
     function validate_fecha($texto){
         if(empty($texto)){
@@ -115,6 +120,7 @@
         $v_antutu=$_POST['antutu'];
         $v_fecha_nacimiento=$_POST['fecha_nacimiento'];
         $v_observaciones=$_POST['observaciones'];
+        $v_email=$_POST['email'];
         //$v_aficion=$_POST['aficion[]'];
 
         $r_usuario=validate_usuario($v_usuario);
@@ -127,6 +133,7 @@
         $r_antutu=validate_cores($v_antutu);
         $r_fecha_nacimiento=validate_fecha($v_fecha_nacimiento);
         $r_observaciones=validate_observaciones($v_observaciones);
+        $r_email=validate_email($v_email);
         //$r_aficion=validate_aficion($v_aficion);
 
         if($r_usuario !== 1){
@@ -189,6 +196,12 @@
         }else{
             $error_observaciones = "";
         }
+        if(!$r_email){
+            $error_email = " * No has introducido un email validophp";
+            $check=false;
+        }else{
+            $error_email = "";
+        }
         /*if(!$r_aficion){
             $error_aficion = " * No has seleccionado ninguna aficion";
             $check=false;
@@ -207,7 +220,7 @@
             'antutu' => $error_antutu,
             'fecha_nacimiento' => $error_fecha_nacimiento,
             'observaciones' => $error_observaciones,
-            
+            'email' => $error_email,
             );
         $resultado=array('resultado'=>$check , 'error'=>$error);
         return $resultado;

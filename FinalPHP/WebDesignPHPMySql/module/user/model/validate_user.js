@@ -1,6 +1,6 @@
 function validate_usuario(texto){
     if (texto.length > 0){
-        var reg=/^[a-zA-Z]*$/;
+        var reg=/^[a-zA-Z0-9]*$/;
         return reg.test(texto);
     }
     return false;
@@ -48,7 +48,7 @@ function validate_sty(texto){
 }
 function validate_pro(texto){
     if (texto.length > 0){
-        var reg=/^[a-zA-Z0-9]*$/;
+        var reg=/^[a-zA-Z]*$/;
         return reg.test(texto);
     }
     return false;
@@ -134,7 +134,7 @@ function validate_idioma(array){
 }
 
 function validate_observaciones(texto){
-    if (texto.length > 0){
+    if (texto.length > 30){
         return true;
     }
     return false;
@@ -156,26 +156,31 @@ function validate_aficion(array){
         return false;
     }
 }
-
+function validate_email(email) {
+    if (email.length > 0) {
+        var regexp = /^[A-Z0-9._%+-]+@(?:[A-Z0-9-]+.)+[A-Z]{2,4}$/i;
+        return regexp.test(email);
+    }
+    return false;
+}
 function validate(){
     var check=true
     
     var v_usuario=document.getElementById('usuario').value;
-    var v_sisop=document.getElementById('sisop').value;
     var v_marca=document.getElementById('marca').value;
     var v_modelo=document.getElementById('model').value;
     var v_sty=document.getElementById('sty').value;
     var v_pro=document.getElementById('pro').value;
     var v_core=document.getElementById('core').value;
     var v_speed=document.getElementById('speed_c').value;
-    
-    //var v_aficion=document.getElementsByName('aficion[]').value;
     var v_fecha_nacimiento=document.getElementById('fecha').value;
     var v_observaciones=document.getElementById('observaciones').value;
     var v_antutu=document.getElementById('antutu').value;
+    var v_email=document.getElementById('email').value;
+    //var v_aficion=document.getElementsByName('aficion[]').value;
+   
     
     var r_usuario=validate_usuario(v_usuario);
-    var r_sisop=validate_sisop(v_sisop);
     var r_marca=validate_marca(v_marca);
     var r_modelo=validate_modelo(v_modelo);
     var r_sty=validate_sty(v_sty);
@@ -185,58 +190,59 @@ function validate(){
     var r_fecha_nacimiento=validate_fecha(v_fecha_nacimiento);
     var r_observaciones=validate_observaciones(v_observaciones);
     var r_antutu=validate_antutu(v_antutu);
+    var r_email=validate_email(v_email);
     //var r_aficion=validate_aficion(v_aficion);
 
     if(!r_usuario){
-        document.getElementById('error_usuario').innerHTML = " * El usuario introducido no es validojs";
+        document.getElementById('error_usuario').innerHTML = " * Please only numbers and letters";
         check=false;
     }else{
         document.getElementById('error_usuario').innerHTML = "";
     }
-    if(!r_sisop){
+    /*if(!r_sisop){
         document.getElementById('error_sisop').innerHTML = " * El sistema operativo introducido no es validojs";
         check=false;
     }else{
         document.getElementById('error_sisop').innerHTML = "";
-    }
+    }*/
     if(!r_marca){
-        document.getElementById('error_marca').innerHTML = " * La marca introducido no es validojs";
+        document.getElementById('error_marca').innerHTML = " * Only letters, please";
         check=false;
     }else{
         document.getElementById('error_marca').innerHTML = "";
     }
     if(!r_modelo){
-        document.getElementById('error_model').innerHTML = " * El modelo introducido no es validojs";
+        document.getElementById('error_model').innerHTML = " * Please only numbers and letters";
         check=false;
     }else{
         document.getElementById('error_model').innerHTML = "";
     }
     if(!r_sty){
-        document.getElementById('error_sty').innerHTML = " * El tipo de pantalla introducido no es validojs";
+        document.getElementById('error_sty').innerHTML = " * Please only numbers and letters";
         check=false;
     }else{
         document.getElementById('error_sty').innerHTML = "";
     }
     if(!r_pro){
-        document.getElementById('error_pro').innerHTML = " * El procesador introducido no es validojs";
+        document.getElementById('error_pro').innerHTML = " * Only letters, please";
         check=false;
     }else{
         document.getElementById('error_pro').innerHTML = "";
     }
     if(!r_core){
-        document.getElementById('error_core').innerHTML = " * El procesador introducido no es validojs";
+        document.getElementById('error_core').innerHTML = " * Only numbers, please";
         check=false;
     }else{
         document.getElementById('error_core').innerHTML = "";
     }
     if(!r_speed){
-        document.getElementById('error_speed').innerHTML = " * La velocidad de los cores introducido no es validojs";
+        document.getElementById('error_speed').innerHTML = " * Check the expression (ej: 2,4,6,1,1)";
         check=false;
     }else{
         document.getElementById('error_speed').innerHTML = "";
     }
     if(!r_fecha_nacimiento){
-        document.getElementById('error_fecha_nacimiento').innerHTML = " * No has introducido ninguna fechajs";
+        document.getElementById('error_fecha_nacimiento').innerHTML = " * Please, revise the date";
         check=false;
     }else{
         document.getElementById('error_fecha_nacimiento').innerHTML = "";
@@ -244,16 +250,22 @@ function validate(){
    
    
     if(!r_observaciones){
-        document.getElementById('error_observaciones').innerHTML = " * El texto introducido no es validojs";
+        document.getElementById('error_observaciones').innerHTML = " * The overview must be more than 30 characters";
         check=false;
     }else{
         document.getElementById('error_observaciones').innerHTML = "";
     }
     if(!r_antutu){
-        document.getElementById('error_antutu').innerHTML = " * El texto introducido no es validojs";
+        document.getElementById('error_antutu').innerHTML = " * Only numbers please";
         check=false;
     }else{
         document.getElementById('error_antutu').innerHTML = "";
+    }
+    if(!r_email){
+        document.getElementById('error_email').innerHTML = " * Please enter valid email";
+        check=false;
+    }else{
+        document.getElementById('error_email').innerHTML = "";
     }
      /* if(!r_aficion){
         document.getElementById('error_aficion').innerHTML = " * No has seleccionado ninguna aficionjs";

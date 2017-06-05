@@ -3,7 +3,7 @@
 //https://app.mailgun.com/app/account/authorized -> autoritzar als emails als quals anem a enviar: ruralshoponti@gmail.com i yomogan@gmail.com
 //https://app.mailgun.com/app/domains -> ací tenim la configuració: api_key i API Base URL
 
-    function send_mailgun(){
+    function send_mailgun($email){
     	$config = array();
     	$config['api_key'] = "key-27a47845669378b8c18d62529d06e676"; //API Key
     	$config['api_url'] = "https://api.mailgun.net/v2/sandboxe09f505918c143c685e0ee65bc9c60ba.mailgun.org/messages"; //API Base URL
@@ -13,7 +13,7 @@
     	$message['to'] = 'firemovieapp@gmail.com';
     	$message['h:Reply-To'] = "firemovieapp@gmail.com";
     	$message['subject'] = "Hello, this is a test";
-    	$message['html'] = 'Hello Sergio ,</br></br> This is a test';
+    	$message['html'] = 'Hello Sergio ' . $email .',</br></br> This is a test';
      
     	$ch = curl_init();
     	curl_setopt($ch, CURLOPT_URL, $config['api_url']);
@@ -41,6 +41,6 @@
         }
     }
     
-    $json = send_mailgun('firemovieapp@gmail.com');
-    echo $json; //send_email_ok
+    /*$json = send_mailgun('firemovieapp@gmail.com');
+    echo $json; //send_email_ok*/
     
