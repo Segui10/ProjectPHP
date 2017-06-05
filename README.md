@@ -54,7 +54,7 @@ La pagina de read es la mas completa ya que se incluyen todos los datos de el mo
 + Tabien la seccion de botones donde se puede volver, hacer un update y un delete de el movil
 + Por ultimo tenemos el boton de Favorite, donde depende de si esta añadido cambiara el boton.
 
-#Delete
+# Delete
 
 <p align="center">
   <img src="https://lh3.googleusercontent.com/-tIAMuqTYY7k/WTXI8j_T8NI/AAAAAAAAAdE/Va6jfUqTbeoLh-SFw147K1iSv-aaDephgCL0B/w530-d-h148-p-rw/zxc.png" width="350px"/>
@@ -62,7 +62,7 @@ La pagina de read es la mas completa ya que se incluyen todos los datos de el mo
 
 En la seccion de delete, el usuario puede elimar el movil que ha sido introducido previamente
 
-#Seccion de contacto
+# Seccion de contacto
 <p align="center">
   <img src="https://lh3.googleusercontent.com/-VKl9y4PYmvE/WTXLSoF133I/AAAAAAAAAeE/GAEjXTQqtgIMz9dIzwh7yCFNrYVM49kbgCL0B/w530-d-h148-p-rw/po.png" width="350px"/>
 </p>
