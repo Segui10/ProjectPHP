@@ -56,8 +56,14 @@ La pagina de read es la mas completa ya que se incluyen todos los datos de el mo
 
 #Delete
 
-p align="center">
+<p align="center">
   <img src="https://lh3.googleusercontent.com/-tIAMuqTYY7k/WTXI8j_T8NI/AAAAAAAAAdE/Va6jfUqTbeoLh-SFw147K1iSv-aaDephgCL0B/w530-d-h148-p-rw/zxc.png" width="350px"/>
 </p>
 
 En la seccion de delete, el usuario puede elimar el movil que ha sido introducido previamente
+
+#Seccion de contacto
+<p align="center">
+  <img src="https://lh3.googleusercontent.com/-VKl9y4PYmvE/WTXLSoF133I/AAAAAAAAAeE/GAEjXTQqtgIMz9dIzwh7yCFNrYVM49kbgCL0B/w530-d-h148-p-rw/po.png" width="350px"/>
+</p>
+En la seccion de contacto se encuentra una localizacion en google maps (Ontinyent, Valencia, España)
